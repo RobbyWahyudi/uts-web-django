@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock title %}</title>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% comment %} <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet" crossorigin="anonymous"> {% endcomment %}
+</head>
+<body>
+
+  <header>
+    <a href="/home"><h1>MIE GACOAN</h1></a>
+    <ul>
+      <li><a href="/home">HOME</a></li>
+      <li><a href="/products">PRODUCTS</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+      <li><a href="/about">ABOUT</a></li>
+    </ul>
+  </header>
+  {% block content %}
+  {% endblock content %}
+  {% comment %} <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}" crossorigin="anonymous"></script>
+  <script src="{% static "bootstrap/js/popper.min.js" %}" crossorigin="anonymous"></script>
+  <script src="{% static "bootstrap/js/bootstrap.min.js" %}" crossorigin="anonymous"></script> {% endcomment %}
+  
+</body>
+</html>
